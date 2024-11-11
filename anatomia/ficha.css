@@ -1,0 +1,191 @@
+﻿.ficha {
+    width: var(--layout-width);
+    margin: 30px auto;
+    color: var(--fullblack);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--cor-de-texto);
+}
+@media print {
+    .ficha {
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+}
+.ficha span {
+    line-height: 1.2;
+}
+.ficha__header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-width: 100%;
+    font-size: 15px;
+}
+.ficha__header-col-de-emblema {
+    flex-direction: column;
+    padding: 20px 0;
+}
+.ficha__emblema {
+    margin: auto;
+    width: 55px;
+    height: 55px;
+}
+.ficha__box-descricao-de-emblema span {
+    display: block;
+    text-align: center;
+    line-height: 1.4;
+    font-weight: 700;
+}
+.ficha__header__col-de-pnct {
+    flex-direction: column;
+    padding-top: 23px;
+    padding-bottom: 23px;
+}
+.ficha__header__col-de-pnct h2 {
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-weight: 700;
+}
+.ficha__moldura-de-logo-de-pnct {
+    margin-top: 7px;
+    width: 140px;
+    height: 55px;
+}
+.ficha__header__col-de-localizacao {
+    display: grid;
+    grid-template-rows: 25px repeat(4, 1fr);
+}
+.ficha__col-de-localizacao__linha {
+    padding-left: 4px;
+}
+.ficha__col-de-localizacao__linha--margin-t {
+    margin-top: 6px;
+    min-height: 20px;
+}
+.ficha__col-de-localizacao__linha--border-t {
+    border-top: 1px solid var(--cor-de-borda);
+    padding-top: 2px;
+    margin-top: 10px;
+}
+.ficha__col-de-localizacao__linha--border-t {
+    border-top: 1px solid var(--cor-de-borda);
+    padding-top: 2px;
+    margin-top: 10px;
+}
+.ficha__col-de-localizacao__linha input {
+    flex: 1;
+}
+.ficha__header__col-de-titulo {
+    grid-column: 1/4;
+    padding: 5px 0;
+    background-color: var(--fullblack);
+    color: var(--yt);
+}
+.ficha__titulo {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 16.8px;
+}
+.ficha__seccao__titulo {
+    font-size: 14px;
+    text-align: center;
+    padding: 8px 0;
+    background-color: var(--fullblack);
+    color: var(--yt);
+}
+.ficha__seccao__titulo--margin-top {
+    margin-top: 6px;
+}
+.ficha__seccao-1__header {
+    display: grid;
+    grid-template-columns: 445px 1fr;
+    grid-template-areas: ". col-2";
+}
+.seccao-1__header__col-2 {
+    grid-area: col-2;
+    display: grid;
+    grid-template-columns: repeat(2, calc(57.8px * 4)) 1fr;
+}
+.seccao-1__header__container-de-num-de-col-sexo-e-faixa-etaria {
+    display: grid;
+    grid-template-rows: 18px 30px 40px;
+}
+.seccao-1__header__linha-de-faixa-etaria {
+    display: grid;
+    grid-template-columns: repeat(4, 57.8px);
+}
+.seccao-1__header__container-de-total {
+    text-align: center;
+}
+.indicador-linear--font-size-s {
+    font-size: 12px;
+    padding-left: 0 !important;
+}
+.grid-template-cols-10 {
+    display: grid;
+    grid-template-columns: 445px repeat(8, 57.8px) 81.63px;
+    grid-template-rows: 65px;
+}
+.grid-template-cols-10--nao-aplicavel {
+    background-color: var(--fullblack);
+}
+.grid-template-cols-10 span {
+    padding-left: 4px;
+}
+.ficha__rodape__nota {
+    padding: 4px;
+    font-size: 11px;
+    line-height: 1.2;
+    font-weight: initial;
+}
+.ficha__rodape__linha-de-nome-e-categoria {
+    display: grid;
+    grid-template-columns: calc(305px + 57.8px + 65px *  5) 1fr;
+    margin: 15px 0;
+    padding-left: 4px;
+    min-height: 21px;
+}
+.ficha__rodape__campo-de-nome {
+    width: 400px;
+}
+.ficha__rodape__campo-de-categoria {
+    width: 212px;
+}
+.ficha__rodape__col-de-data {
+    padding-left: 4px;
+    padding-bottom: 15px;
+}
+#input-data {
+    border-bottom: 2px dotted var(--cor-de-borda);
+}
+/* CLASSES REUTILIZÁVEIS */
+.celula-nao-aplicavel {
+    background-color: var(--gray--a);
+}
+.--cor-de-fundo-padrao {
+    background-color: var(--gray--c);
+}
+.--cor-de-fundo-padrao--discreta {
+    background-color: var(--gray--light);
+}
+[data-totaleixox]:focus,
+.ficha__seccao--2 input:focus,
+.input-nao-celular:focus,
+.ficha__input-obs:focus {
+    border-bottom: 2px solid var(--blue);
+    background-color: var(--greenyellow);
+    color: var(--cor-de-texto);
+}
+@media screen {
+    .input--realcar-totais {
+        background-color: var(--cor-de-realce-de-totais);
+    }
+}
+.input--bg-color-danger {
+    background-color: var(--cor-de-risco);
+    color: var(--yt)
+}
+.input--font-small {
+    font-size: 13.5px
+}
