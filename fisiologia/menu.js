@@ -144,7 +144,7 @@ function eventos() {
     const data = {
         title: "Totalizador de Resumo Trimestral das Actividades de Apoio Psicossocial",
         text: "Totaliza automaticamente o resumo trimestral das actividades de apoio psicossocial (MOD. SIS - PNCT APSS 11A) com base nos dados inseridos pelo usuário. Foi desenvolvido de acordo com o modelo da respectiva ficha de resumo trimestral actualmente vigente no Serviço Nacional de Saúde em Moçambique.",
-        url: "https://quinamine.github.io/totalizador-de-resumo-trimestral-de-fortalecimento-de-sistemas-para-tb/index.html"
+        url: "https://quinamine.github.io/totalizador-de-resumo-trimestral-das-actividades-de-apoio-psicossocial-mod-sis-pnct-apss-11-a/index.html"
     }
     const btnPartilhar = document.querySelector(".header__menu__btn--partilhar");
     btnPartilhar.addEventListener("click", () => {

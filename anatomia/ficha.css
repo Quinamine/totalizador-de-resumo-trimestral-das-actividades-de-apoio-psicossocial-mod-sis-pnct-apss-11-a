@@ -88,14 +88,16 @@
     font-size: 16.8px;
 }
 .ficha__seccao__titulo {
-    font-size: 14px;
+    font-size: 15px;
+    letter-spacing: -0.4px;
     text-align: center;
     padding: 8px 0;
     background-color: var(--fullblack);
     color: var(--yt);
+    margin-top: 3px;
 }
 .ficha__seccao__titulo--margin-top {
-    margin-top: 6px;
+    margin-top: 12px;
 }
 .ficha__seccao-1__header {
     display: grid;
@@ -157,7 +159,7 @@
     padding-bottom: 15px;
 }
 #input-data {
-    border-bottom: 2px dotted var(--cor-de-borda);
+    border-bottom: 1px dotted var(--cor-de-borda);
 }
 /* CLASSES REUTILIZÁVEIS */
 .celula-nao-aplicavel {
@@ -169,7 +171,7 @@
 .--cor-de-fundo-padrao--discreta {
     background-color: var(--gray--light);
 }
-[data-totaleixox]:focus,
+[data-totalporsexo]:focus,
 .ficha__seccao--2 input:focus,
 .input-nao-celular:focus,
 .ficha__input-obs:focus {

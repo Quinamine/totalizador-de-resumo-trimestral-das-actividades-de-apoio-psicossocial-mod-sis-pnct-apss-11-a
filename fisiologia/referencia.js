@@ -1,22 +1,24 @@
 "use strict"
 const referencia = {
-    retornarLinhaEcoluna(inputTarget) {
-        const linhaOutput = document.querySelector(".reference__output--indicador");
-        const colunaOutput = document.querySelector(".reference__output--idade");
-        const indicadoresColunares = document.querySelectorAll(".seccao-1__header__linha-de-indicadores span");
+    retornarIndicador(inputTarget) {
+        const indicadorOutput = document.querySelector(".reference__output--indicador");
+        let indicador = inputTarget.parentElement.children[0].querySelector("span").textContent;
+        indicadorOutput.value = indicador;
+    },
+    retornarFaixaEtariaEsexo(inputTarget) {
+        const faixasEtarias = document.querySelectorAll(".seccao-1__header__linha-de-faixa-etaria span");
+        const faixaEtariaOutput = document.querySelector(".reference__output--idade");
+        const sexos = ["Masculino", "Feminino"];
+        const sexoOutput = document.querySelector(".reference__output--sexo");
         const inputTargetAndSiblings = inputTarget.parentElement.children;
-        let inputTargetColIndex = Number(inputTarget.parentElement.dataset.colindex);
-        for(let i=0; i < inputTargetAndSiblings.length; i++)  {
-            if(inputTargetAndSiblings[i] === inputTarget) inputTargetColIndex = i - 1;
+        let inputTargetIndex;
+        for(let i = 0; i < inputTargetAndSiblings.length; i++) {
+            if(inputTargetAndSiblings[i] === inputTarget) inputTargetIndex = i - 1;
         }
-        let indicadorLinear = inputTarget.parentElement.children[0].querySelector("span");
-        let indicadorColunar = indicadoresColunares[inputTargetColIndex];
-        if(inputTarget.parentElement.matches(".ficha__seccao-2__linha-de-indicador-e-seu-input")) {
-            indicadorLinear = inputTarget.parentElement.children[0];
-            indicadorColunar = inputTarget.parentElement.parentElement.children[0].querySelector("span");
-        }
-        linhaOutput.innerHTML = indicadorLinear.textContent;
-        colunaOutput.innerHTML = indicadorColunar.textContent;
+        faixaEtariaOutput.value = faixasEtarias[inputTargetIndex].textContent;
+        let sexoIndex = inputTargetIndex < 4 ? 0 : 1;
+        sexoOutput.value = sexos[sexoIndex];
+
     },
     retornarVazio() {
         const outputs = document.querySelectorAll(".reference__output");
@@ -24,12 +26,11 @@ const referencia = {
     }
 }
 function events() {
-    const inputsCelulares = document.querySelectorAll(".ficha__seccao input");
+    const inputsCelulares = document.querySelectorAll("[data-totalgeral]");
     inputsCelulares.forEach( inputCelular => {
         inputCelular.addEventListener("focus", () => {
-            if(!inputCelular.matches("[readonly]")) {
-                referencia.retornarLinhaEcoluna(inputCelular);
-            }
+            referencia.retornarIndicador(inputCelular);
+            referencia.retornarFaixaEtariaEsexo(inputCelular);
         });
     });
     inputsCelulares.forEach( inputCelular => inputCelular.addEventListener("focusout", referencia.retornarVazio));
