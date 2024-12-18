@@ -24,18 +24,16 @@ function alertarSobre(msg) {
     dialogBoxDefault.classList.add("--open");
 }
 function destacarCelulasComConteudoOmisso() {
-    const celulas = document.querySelectorAll(".ficha__seccao input");
+    const celulas = document.querySelectorAll(".grid-template-cols-10 input");
     let celulasSaturadas = 0;
     for(const c of celulas) {
         c.classList.remove("input--font-small");
         c.classList.remove("input--bg-color-danger");
-        if(c.clientWidth < 100) {
-            if(c.value.length === 9) {
-                c.classList.add("input--font-small");
-            } else if(c.value.length > 9) {
-                c.classList.add("input--bg-color-danger");
-                celulasSaturadas++;
-            }
+        if(c.value.length === 8) {
+            c.classList.add("input--font-small");
+        } else if(c.value.length > 8) {
+            c.classList.add("input--bg-color-danger");
+            celulasSaturadas++;
         }
     }
     if(celulasSaturadas > 0) {
@@ -88,6 +86,15 @@ function fecharTopoPropaganda() {
     topoPropaganda.classList.add("topo-propaganda--off");
     body.classList.remove("body-com-topo-propaganda")
 }
+function omitirLinkDesteServicoNoRodape(){
+    const servicosAfins = document.querySelectorAll(".footer__nav__link");
+    let urlDestaPagina = location.href;
+    for (const servico of servicosAfins) {
+        if(servico.href === urlDestaPagina) {
+            servico.parentElement.hidden = true;
+        }
+    }
+}
 let btnAutoCloseLoop;
 window.addEventListener("load", () => {
     const readonlyInputs = document.querySelectorAll("[readonly]");
@@ -119,4 +126,5 @@ window.addEventListener("load", () => {
     });
     inputObs.addEventListener("focus", () => inputObs.parentElement.classList.add("--focus"));
     inputObs.addEventListener("focusout", () => inputObs.parentElement.classList.remove("--focus"));
+    omitirLinkDesteServicoNoRodape();
 });
