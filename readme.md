@@ -7,7 +7,7 @@ O **Totalizador de Resumo Trimestral das Actividades de Apoio Psicossocial** é 
 
 ## Objectivos
 
-* Auxiliar os Profissionais de Saúde na totalização do resumo trimestral das actividades de apoio psicossocial (MOD. SIS - PNCT APSS 11A) com exatidão e prontidão;
+* Auxiliar os profissionais de saúde na totalização do resumo trimestral das actividades de apoio psicossocial (MOD. SIS - PNCT APSS 11A) com exatidão e prontidão;
 
 * Minimizar possíveis erros de totalização (por exemplo, somar involuntariamente células não correspondentes ou registar o total da linha A, na linha B);
 
