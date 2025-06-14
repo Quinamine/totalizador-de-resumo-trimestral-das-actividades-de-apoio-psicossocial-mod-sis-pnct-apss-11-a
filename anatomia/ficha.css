@@ -1,7 +1,7 @@
 ﻿.ficha {
     width: var(--layout-width);
     margin: 30px auto;
-    color: var(--fullblack);
+    color: var(--black);
     font-size: 14px;
     font-weight: 700;
     color: var(--cor-de-texto);
@@ -79,7 +79,7 @@
 .ficha__header__col-de-titulo {
     grid-column: 1/4;
     padding: 5px 0;
-    background-color: var(--fullblack);
+    background-color: var(--black);
     color: var(--yt);
 }
 .ficha__titulo {
@@ -92,7 +92,7 @@
     letter-spacing: -0.4px;
     text-align: center;
     padding: 8px 0;
-    background-color: var(--fullblack);
+    background-color: var(--black);
     color: var(--yt);
     margin-top: 3px;
 }
@@ -130,7 +130,7 @@
     grid-template-rows: 65px;
 }
 .grid-template-cols-10--nao-aplicavel {
-    background-color: var(--fullblack);
+    background-color: var(--black);
 }
 .grid-template-cols-10 span {
     padding-left: 4px;
@@ -163,13 +163,13 @@
 }
 /* CLASSES REUTILIZÁVEIS */
 .celula-nao-aplicavel {
-    background-color: var(--gray--a);
+    background-color: var(--gray-a);
 }
 .--cor-de-fundo-padrao {
-    background-color: var(--gray--c);
+    background-color: var(--gray-c);
 }
 .--cor-de-fundo-padrao--discreta {
-    background-color: var(--gray--light);
+    background-color: var(--gray-light);
 }
 [data-totalporsexo]:focus,
 .ficha__seccao--2 input:focus,
