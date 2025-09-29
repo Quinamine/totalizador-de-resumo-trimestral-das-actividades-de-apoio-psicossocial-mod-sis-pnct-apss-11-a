@@ -2,7 +2,7 @@
 
 ![Trecho do Totalizador de Resumo Trimestral das Actividades de Apoio Psicossocial](imagens/totalizador-de-resumo-trimestral-das-actividades-de-apoio-psicossocial-mod-sis-pnct-apss-11-a.png)
 
-O **Totalizador de Resumo Trimestral das Actividades de Apoio Psicossocial** é um serviço online gratuito que auxilia na elaboração do resumo trimestral das actividades de apoio psicossocial (MOD. SIS - PNCT APSS 11A) por meio do cálculo automático dos totais com base nos dados inseridos pelo usuário. Foi desenvolvido de acordo com o modelo da respectiva ficha de resumo trimestral actualmente vigente no Serviço Nacional de Saúde em Moçambique.
+O **Totalizador de Resumo Trimestral das Actividades de Apoio Psicossocial** é um serviço online gratuito, que auxilia na elaboração do resumo trimestral das actividades de apoio psicossocial (MOD. SIS - PNCT APSS 11A) por meio do cálculo automático dos totais com base nos dados inseridos pelo usuário. Foi desenvolvido de acordo com o modelo da respectiva ficha de resumo trimestral actualmente vigente no Serviço Nacional de Saúde em Moçambique.
 
 
 ## Objectivos
